@@ -15,7 +15,7 @@
 
 <?php
 
- $new = new Person();
+ $new = new Person\Person();
 
  echo $new->two;
 

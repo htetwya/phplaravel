@@ -23,9 +23,9 @@ $con = new MrConstruct("John doe");
 
 unset($con); //destroy object
 
-Person2::newDrinkingAge(21);
+Person\Person2::newDrinkingAge(21);
 
-echo Person2::$drinkingAge;
+echo Person\Person2::$drinkingAge;
 
 ?>
 
