@@ -4,7 +4,7 @@ include 'connectDb.class.php';
 
  class Users extends connectDb{
 
-  public function getAllUsers(){
+  protected function getAllUsers(){
     
     //get the connection from parent class
     $conn = $this->connect();
@@ -12,19 +12,10 @@ include 'connectDb.class.php';
     //retrieve data from database
     $statement = $conn->prepare('select * from testone_users');
     $result = $statement->execute();
-    if($result){
+    
+    $rows = $statement->fetchAll();
 
-      $rows = $statement->fetchAll();
-
-      foreach($rows as $val){
-        
-        echo $val['username'];
-      }
-      
-    }else{
-
-      echo "Cannot retrieve data";
-    }
+    return $rows;
   }
 
   public function getUserById($id){
@@ -52,3 +43,4 @@ include 'connectDb.class.php';
  }
 
 ?>
+

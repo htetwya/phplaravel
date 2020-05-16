@@ -1,6 +1,7 @@
 <?php
 
 declare (strict_types=1);
+
 include "autoloader.inc.php";
 
  if(isset($_POST['calculate'])){

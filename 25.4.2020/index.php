@@ -15,11 +15,8 @@
 
 <?php
 
- $userObj = new Users();
- $userObj->getAllUsers();echo "<br>";
- $userObj->getUserById(2);
-
- $productObj = new Products();
+ $userObj = new UserView();
+ $userObj->showUsers();
 
 ?>
   
